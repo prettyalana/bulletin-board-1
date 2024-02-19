@@ -12,7 +12,7 @@ class BoardsController < ApplicationController
 
     matching_boards = Board.where({ :id => the_id })
 
-    @the_board = matching_boards.at(0)
+    @the_board = matching_boards[0]
 
     render({ :template => "boards/show" })
   end
